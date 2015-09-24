@@ -1,0 +1,33 @@
+requires 'DBIx::Simple::Class';
+requires 'DBIx::Simple::Class::Schema';
+requires 'Email::Address';
+requires 'FCGI';
+requires 'FCGI::ProcManagerApache::LogFormat::Compiler';
+requires 'File::Path';
+requires 'Getopt::Long';
+requires 'I18N::LangTags::Detect';
+requires 'List::Util';
+requires 'Module::Build';
+requires 'Mojo::Base';
+requires 'Mojo::JSON';
+requires 'Mojo::Util';
+requires 'Mojolicious::Command::version';
+requires 'Mojolicious::Commands';
+requires 'Perl::Tidy';
+requires 'Plack';
+requires 'Pod::Markdown';
+requires 'Pod::Text';
+requires 'Text::MultiMarkdown';
+requires 'Time::Piece';
+requires 'Time::Seconds';
+requires 'parent';
+requires 'perl', '5.014';
+
+on test => sub {
+    requires 'File::Temp';
+    requires 'Mojo::Server::FastCGI';
+    requires 'Mojo::UserAgent';
+    requires 'Test::Mojo';
+    requires 'Test::More';
+    requires 'Test::Perl::Critic';
+};
